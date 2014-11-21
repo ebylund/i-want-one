@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+.navbar-custom {
+    background-color:rgba(255,255,255,.8);
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#000;
+    background-color: rgba(255,255,255,.8);
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color:transparent;
+}
+.navbar-custom .navbar-brand {
+    color:#000;
+}
+
+.banner{
+    width: 100%;
+    max-width:700px;
+    margin-top:100px;
+    min-height: 270px;
+    background-color:rgba(255,255,255,.8);
+    min-width: 600px;
+
+
+}
+
+.authform {
+  padding:15px;
+  max-width: 520px;
+  margin: 50px auto;
+    color:black;
+    background-color:rgba(255,255,255,.8);
+    border-radius: 5px;
+}
+.authform h1{
+ text-align: center;
+    color:black;
+}
+.authform p{
+    color:grey;
+    text-align: center;
+}
+.authform form {
+  padding-bottom: 40px;
+}
+.authform .right {
+  float: right !important;
+}
+
+#error_explanation h2 {
+  font-size: 16px;
+}
+
+.navbar-right{
+    margin-left:-20px;
+    text-align: left;
+}
+
+.navbar-left{
+    margin-right:0px;
+    text-align: left;
+}
+.well{
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+

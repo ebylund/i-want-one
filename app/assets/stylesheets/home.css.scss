@@ -1,0 +1,71 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.home {
+    margin-top:-75px;
+    background: image-url('shoppingbags.jpg')  center center ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    height:750px;
+    padding-top:20px;
+
+
+
+}
+
+
+
+
+h2{
+    width:100%;
+    text-align: center;
+    font-size: 75px;
+
+}
+
+.jumbotron{
+ background-color:rgba(255,255,255,.8);
+ margin-top:100px;
+    margin-right:50px;
+    margin-left:50px;
+    border-radius: 10px;
+}
+
+.jumbotron p{
+ text-align: center;
+}
+
+.center{
+ text-align: center;
+}
+
+.downarrow{
+    margin-top: 120px;
+}
+
+@-webkit-keyframes pulse {
+    0%   {opacity: .25;}
+    50% {opacity: .8;}
+    100% {opacity: .25;}
+}
+
+/* Standard syntax */
+@keyframes pulse {
+    0%   {opacity: .25;}
+    50% {opacity: .8;}
+    100% {opacity: .25;}
+
+}
+
+.scrollindicator{
+    -webkit-animation: pulse 2s linear infinite alternate; /* Chrome, Safari, Opera */
+    animation: pulse 2s linear infinite alternate; /* Standard syntax */
+}
+
+
+
