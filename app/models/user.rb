@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   has_many :stores
 
-  has_many :friendships
+  has_many :friendships, :class_name => 'Friendship', foreign_key: 'user_id'
   has_many :friends, :through => :friendships
 
   has_many :user_products
@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
       user.location = auth.info.location
       user.first_name = auth.info.first_name
       user.last_name = auth.info.last_name
-      
+
     end
   end
  mount_uploader :attachment, AttachmentUploader
