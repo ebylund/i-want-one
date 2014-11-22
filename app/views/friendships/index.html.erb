@@ -19,9 +19,6 @@
         <% end %>
         <td><p><%= link_to u.first_name, user_path(id: u.id) %> <%= link_to u.last_name, user_path(id: u.id) %></td>
         <td><p><%= u.email %></p></td>
-         <td><p><%= link_to 'Add Friend' , new_user_registration_path, class: "btn btn-danger", style: "float:right; margin-top:35px; margin-right:10px;" %></p></td>
     </tr>
   <% end %>
 </table>
-
-
