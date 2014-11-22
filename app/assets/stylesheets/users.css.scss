@@ -1,0 +1,41 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+     background-color:rgba(0,0,0,.1);
+}
+
+.profilepic{
+ width: 100%;
+    margin-top:25px;
+ margin-bottom:10px;
+ max-width:250px;
+}
+
+
+.no_bullets{
+    margin-top:15px;
+    font-size:20px;
+ list-style-type: none;
+}
+
+.name{
+    margin-top:25px;
+ font-size: 35px;
+}
+
+.container_profile{
+    margin-top:-20px;
+}
+
+@media screen and (max-width: 765px) {
+  .col-sm-9{
+     text-align: center;
+  }
+
+    .col-sm-3{
+     text-align: center;
+    }
+
+
+}
