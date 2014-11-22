@@ -1,3 +1,8 @@
-<div id="test">content</div>
-<%= link_to %>
-<%= link_to "Best Buy", :class => 'bestbuy' %>
+
+
+
+<% @stores.each do |u| %>
+  <tr>
+      <td id="test"><p><%= link_to image_tag( 'bestbuy.jpg' ), store_path(id: u.id) %></p></td>
+  </tr>
+  <%end%>

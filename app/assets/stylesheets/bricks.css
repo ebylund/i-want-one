@@ -302,6 +302,9 @@ box-shadow:         1px 1px 8px 0px rgba(50, 50, 50, 0.5);
 
 }
 
+
+
+
 .brick .cover {
 	overflow: hidden;
 	margin: 20px;
@@ -309,11 +312,17 @@ box-shadow:         1px 1px 8px 0px rgba(50, 50, 50, 0.5);
 
 .brick img{
  width:100%;
+    max-height: 350px;
+    overflow: hidden;
 
 }
 
 .info {
  margin-left:15px;
+}
+
+.info h3{
+
 }
 
 .brick .read-more {
