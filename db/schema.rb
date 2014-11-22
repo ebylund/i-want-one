@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121184123) do
+ActiveRecord::Schema.define(version: 20141122052917) do
+
+  create_table "credentials", force: true do |t|
+    t.string   "token"
+    t.integer  "expired_at"
+    t.boolean  "expires"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+  end
 
   create_table "friendships", force: true do |t|
     t.integer  "user_id"
