@@ -1,48 +1,73 @@
 
 <div class="container-fluid container-fixed">
     <div id="freewall" class="free-wall">
-		    <div class="col-sm-4" id="computers">
-		        <%= image_tag('computers.png', style: "height:250px; width:100%; background-color:white;") %>
-		        <div class="info" >
+<!--
+
+		    <div class="col-sm-4 categories" id="computers">
+
 		            <h3>Computers</h3>
-		        </div>
+
 		    </div>
 
-          <div class="col-sm-4" id="televisions">
-		        <%= image_tag('vizio.jpg', style: "height:250px; width:100%;") %>
-		        <div class="info">
+          <div class="col-sm-4 categories" id="televisions">
+
+
 		            <h3>Televisions</h3>
-		        </div>
+
 		    </div>
-         <div class="col-sm-4" id="printers">
-		        <%= image_tag('printer.jpg', style: "height:250px; width:100%;") %>
-		        <div class="info">
+         <div class="col-sm-4 categories" id="printers">
+
 		            <h3>Printers</h3>
-		        </div>
+
 		    </div>
 
-         <div class="col-sm-4" id="phones">
-		        <%= image_tag('phones.jpg', style: "height:250px; width:100%;") %>
-		        <div class="info">
+         <div class="col-sm-4 categories" id="phones">
+
 		            <h3>Phones</h3>
-		        </div>
+
 		    </div>
 
-         <div class="col-sm-4" id="consoles">
-		        <%= image_tag('consoles.jpg', style: "height:250px; width:100%;")%>
-		        <div class="info">
+         <div class="col-sm-4 categories" id="consoles">
+
 		            <h3>Video Games</h3>
-		        </div>
+
 		    </div>
 
 
 </div>
     </div>
 <hr>
+-->
 
 <div class="container-fluid container-fixed">
     <div id="freewall freewall2" class="free-wall">
-        <h2>Products</h2>
+        <div class="container">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Categories</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+           <li id="computers"><a href="#">Computers</a></li>
+           <li id="televisions"><a href="#">Televisions</a></li>
+           <li id="printers"><a href="#">Printers</a></li>
+           <li id="phones"><a href="#">Phones</a></li>
+           <li id="consoles"><a href="#">Video Games</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
         <div id="products"></div>
     </div>
 </div>

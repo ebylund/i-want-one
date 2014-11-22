@@ -129,6 +129,7 @@ jQuery(function($){
       },
       dataType: 'json'
     });
+
   });
 
 });

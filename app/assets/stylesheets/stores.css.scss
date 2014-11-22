@@ -3,3 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.categories{
+ text-align: center;
+    background-color: rgba(255,255,255,.3);
+    border-radius:10px;
+    border:1px solid black;
+
+
+}
+
+.categories:hover{
+ background-color:rgba(255,255,255,.9);
+    cursor: pointer;
+}
+
+
+
+.categories h3{
+ line-height: 250px;
+    font-size: 35px;
+}
+
+.categeries:hover h3{
+ color:white;
+}
