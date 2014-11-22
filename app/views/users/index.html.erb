@@ -12,16 +12,24 @@
 <table class="table table-striped">
   <% @users.each do |u| %>
     <tr>
+      <% if u.image %>
+        <td ><%= link_to image_tag( u.image ), user_path(id: u.id) %></td>
+      <% else %>
         <% if u.attachment.url %>
-        <td ><%= link_to image_tag( u.attachment.url ), user_path(id: u.id) %></td>
+            <td ><%= link_to image_tag( u.attachment.url ), user_path(id: u.id) %></td>
         <% else %>
-        <td><%= link_to image_tag('profile_default.jpg'), user_path(id: u.id) %></td>
+            <td><%= link_to image_tag('profile_default.jpg'), user_path(id: u.id) %></td>
         <% end %>
+      <% end %>
+      <% if u.name %>
+        <td><p><%= link_to u.name, user_path(id: u.id) %></p></td>
+      <% else %>
         <td><p><%= link_to u.first_name, user_path(id: u.id) %> <%= link_to u.last_name, user_path(id: u.id) %></td>
-        <td><p><%= u.email %></p></td>
-         <td><p><%= link_to 'Add Friend' , new_user_registration_path, class: "btn btn-danger", style: "float:right; margin-top:35px; margin-right:10px;" %></p></td>
+      <% end %>
+      <td><p><%= u.email %></p></td>
+      <td><p><%= link_to 'Add Friend' , new_user_registration_path, class: "btn btn-danger", style: "float:right; margin-top:35px; margin-right:10px;" %></p></td>
     </tr>
-  <% end %>
+  <%end%>
 </table>
 
 
