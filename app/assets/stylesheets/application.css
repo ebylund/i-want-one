@@ -18,6 +18,14 @@
 body{
  font-family: Verdana, Geneva, sans-serif;
 }
+
+.navbar-image{
+    margin-top:-5px;
+    width:30px;
+    border-radius: 3px;
+    float:left;
+    margin-right:0px;
+}
 .navbar-default {
     background-color:rgba(255,255,255,1);
     color:#000;
@@ -37,16 +45,6 @@ body{
     color:#000;
 }
 
-.banner{
-    width: 100%;
-    max-width:700px;
-    margin-top:100px;
-    min-height: 270px;
-    background-color:rgba(255,255,255,.8);
-    min-width: 600px;
-
-
-}
 
 .authform {
   padding:15px;

@@ -1,18 +1,22 @@
 <div class="container_profile">
 
 <div class="container profile_container">
+<!--    <%= image_tag @user.banner.url, class: 'banner' %>-->
     <div class="col-sm-3">
-     <%= image_tag('profile_default.jpg', class: 'profilepic') %>
+        <% if @user.attachment.url %>
+        <%= image_tag @user.attachment.url, class: 'profilepic' %>
+        <% else %>
+         <%= image_tag 'profile_default.jpg', class: 'img-rounded img-responsive' %>
+        <% end %>
     </div>
     <div class="col-sm-9">
+        <br>
      <ul class="no_bullets">
         <li><strong class="name"><%= @user.first_name %> <%= @user.last_name %></strong></li>
          <li>Lives In: <%= @user.location %></li>
          <li>Birthday: <%= @user.birthday %></li>
          <li>Email: <%= @user.email %></li>
-         <% if @user == current_user %>
-         <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
-         <% end %>
+
     </ul>
     </div>
 

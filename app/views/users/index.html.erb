@@ -1,23 +1,30 @@
 
 
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-8" >
+<%= form_tag users_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search], class:"search-field" %>
+    <%= submit_tag "Search for Friends", :name => nil, class: "btn btn-danger" %>
+  </p>
+<% end %>
+</div>
 
-
-<table>
+<table class="table table-striped">
 <% @users.each do |u| %>
-
-    <tr>
-        <th></th>
-        <th>Name</th>
-        <th>Email</th>
-    </tr>
   <tr>
-      <td><%= u.image %></td>
-      <td><%= u.first_name%> <%= u.last_name %></td>
-      <td><%= u.email %></td>
+      <% if u.attachment.url %>
+      <td ><%= image_tag u.attachment.url %></td>
+      <% else %>
+      <td ><%= image_tag('profile_default.jpg') %></td>
+      <% end %>
+      <td><p><%= u.first_name%> <%= u.last_name %></p></td>
+      <td><p><%= u.email %></p></td>
+       <td><p><%= link_to 'Add Friend' , new_user_registration_path, class: "btn btn-danger", style: "float:right; margin-top:35px; margin-right:10px;" %></p></td>
 
   </tr>
   <%end%>
     </table>
 
-</div>
+    </div>
+
+

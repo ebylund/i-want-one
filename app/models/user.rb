@@ -15,4 +15,10 @@ class User < ActiveRecord::Base
   has_many :products, :through => :user_products
 
  mount_uploader :attachment, AttachmentUploader
+ mount_uploader :banner, BannerUploader
+
+  def self.search(query)
+  where("first_name like ?", "%#{query}%")
+
+end
 end

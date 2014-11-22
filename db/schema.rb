@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121184123) do
+ActiveRecord::Schema.define(version: 20141122042933) do
 
   create_table "friendships", force: true do |t|
     t.integer  "user_id"
@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(version: 20141121184123) do
     t.string   "uid"
     t.string   "image"
     t.string   "username"
+    t.string   "banner"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
