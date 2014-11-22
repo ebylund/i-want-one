@@ -13,14 +13,13 @@
 <% @users.each do |u| %>
   <tr>
       <% if u.attachment.url %>
-      <td ><%= image_tag u.attachment.url %></td>
+      <td ><%= link_to image_tag( u.attachment.url ), user_path(id: u.id) %></td>
       <% else %>
-      <td ><%= image_tag('profile_default.jpg') %></td>
+      <td><%= link_to image_tag('profile_default.jpg'), user_path(id: u.id) %></td>
       <% end %>
-      <td><p><%= u.first_name%> <%= u.last_name %></p></td>
+      <td><p><%= link_to u.first_name, user_path(id: u.id) %> <%= link_to u.last_name, user_path(id: u.id) %></td>
       <td><p><%= u.email %></p></td>
        <td><p><%= link_to 'Add Friend' , new_user_registration_path, class: "btn btn-danger", style: "float:right; margin-top:35px; margin-right:10px;" %></p></td>
-
   </tr>
   <%end%>
     </table>
