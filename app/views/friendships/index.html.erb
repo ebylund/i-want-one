@@ -1,5 +1,4 @@
 
-
 <div class="col-md-8" >
   <%= form_tag users_path, :method => 'get' do %>
     <p>
@@ -10,15 +9,23 @@
 </div>
 
 <table class="table table-striped">
-  <% @users.each do |u| %>
+  <% @users.each do |user| %>
     <tr>
-        <% if u.attachment.url %>
-        <td ><%= link_to image_tag( u.attachment.url ), user_path(id: u.id) %></td>
+      <% if user.image %>
+        <td ><%= link_to image_tag( user.image ), user_path(user) %></td>
+      <% else %>
+        <% if user.attachment.url %>
+            <td ><%= link_to image_tag( user.attachment.url ), user_path(user) %></td>
         <% else %>
-        <td><%= link_to image_tag('profile_default.jpg'), user_path(id: u.id) %></td>
+            <td><%= link_to image_tag('profile_default.jpg'), user_path(user) %></td>
         <% end %>
-        <td><p><%= link_to u.first_name, user_path(id: u.id) %> <%= link_to u.last_name, user_path(id: u.id) %></td>
-        <td><p><%= u.email %></p></td>
+      <% end %>
+      <% if user.name %>
+        <td><p><%= link_to user.name, user_path(user) %></p></td>
+      <% else %>
+        <td><p><%= link_to user.first_name, user_path(user) %> <%= link_to user.last_name, user_path(user) %></td>
+      <% end %>
+      <td><p><%= user.email %></p></td>
     </tr>
   <% end %>
 </table>

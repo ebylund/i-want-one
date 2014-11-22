@@ -12,8 +12,10 @@ Rails.application.routes.draw do
 
   resources :users
   resources :stores
-  get 'users/:id/friends' => 'friendships#index'
-  get 'users/:id/friends/:id' => 'friendships#show'
+
+  get 'users/:id/friends' => 'friendships#index', as: :friendships
+  get 'users/:id/friends/:id' => 'friendships#show', as: :friendship
+  post 'users/:id/friends' => 'friendships#create', as: :new_friendship
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
