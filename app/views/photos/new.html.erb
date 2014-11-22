@@ -1,0 +1,25 @@
+           <div class='panel panel-default'>
+      <div class='panel-heading'>
+        <h3 class='panel-title'>Add New Photo</h3>
+          <h5>Cant be PDF</h5>
+
+         <br>
+            <%= form_for Photo.new, html: { multipart: true } do |f| %>
+        <div class="form-group">
+            <%= f.label :title %>
+    <%= f.text_field :title, :class => "form-control", :placeholder => "Image Title" %>
+            </div>
+
+          <div class="form-group">
+              <%= f.label :select_image%>
+  <%= f.file_field :image %>
+            </div>
+
+
+  <%= f.submit 'Submit', :class => "btn btn-danger" %>
+<% end %>
+        </div>
+
+
+
+    </div>

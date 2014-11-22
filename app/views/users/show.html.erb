@@ -6,12 +6,13 @@
     </div>
     <div class="col-sm-9">
      <ul class="no_bullets">
-        <li><strong class="name">Connor Van Gilder</strong></li>
-         <br>
-         <li>Lives In: St George</li>
-         <li>From: St George</li>
-         <li>Birthday: 08/28/1991</li>
+        <li><strong class="name"><%= @user.first_name %> <%= @user.last_name %></strong></li>
+         <li>Lives In: <%= @user.location %></li>
+         <li>Birthday: <%= @user.birthday %></li>
          <li>Email: <%= @user.email %></li>
+         <% if @user == current_user %>
+         <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+         <% end %>
     </ul>
     </div>
 

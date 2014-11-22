@@ -14,5 +14,5 @@ class User < ActiveRecord::Base
   has_many :user_products
   has_many :products, :through => :user_products
 
-  #mount_uploader :attachment, AttachmentUploader
+ mount_uploader :attachment, AttachmentUploader
 end

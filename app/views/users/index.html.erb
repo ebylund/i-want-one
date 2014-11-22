@@ -1,8 +1,23 @@
+
+
+<div class="col-md-8 col-md-offset-2">
+
+
 <table>
 <% @users.each do |u| %>
+
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
   <tr>
+      <td><%= u.image %></td>
+      <td><%= u.first_name%> <%= u.last_name %></td>
       <td><%= u.email %></td>
-      <td><%= u.created_at %></td>
+
   </tr>
   <%end%>
     </table>
+
+</div>
