@@ -1,0 +1,82 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+     background-color:rgba(0,0,0,.1);
+}
+
+.profilepic{
+ width: 100%;
+    margin-top:25px;
+ margin-bottom:25px;
+ max-width:250px;
+    border: 1px solid rgba(255,255,255,.5);
+     -webkit-box-shadow: 1px 1px 13px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    1px 1px 13px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         1px 1px 13px 0px rgba(50, 50, 50, 0.75);
+}
+
+.profile_container{
+    width:100%;
+    margin-bottom:25px;
+    max-height:550px;
+    overflow: hidden;
+}
+
+
+
+.banner{
+ width:100%;
+    min-width:600px;
+position: absolute;
+    margin-left:-15px;
+    min-height:550px;
+    max-height:550px;
+    overflow: hidden;
+}
+
+.no_bullets{
+    margin-top:15px;
+    font-size:20px;
+ list-style-type: none;
+}
+
+.name{
+    margin-top:25px;
+ font-size: 35px;
+}
+
+.container_profile{
+    margin-top:-20px;
+}
+
+.search-field{
+    padding:5px;
+    height:35px;
+    width:400px;
+}
+td p{
+ line-height:100px;
+}
+
+td{
+    margin-top:10px;
+ min-width:200px;
+}
+
+td img{
+ height:110px;
+}
+
+
+@media screen and (max-width: 765px) {
+  .col-sm-9{
+     text-align: center;
+  }
+
+    .col-sm-3{
+     text-align: center;
+    }
+
+
+}

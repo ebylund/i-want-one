@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 20141122052917) do
     t.string   "uid"
     t.string   "image"
     t.string   "username"
+    t.string   "banner"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

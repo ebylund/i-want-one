@@ -1,0 +1,84 @@
+<div class="container_profile">
+
+<div class="container profile_container">
+<!--    <%= image_tag @user.banner.url, class: 'banner' %>-->
+    <div class="col-sm-3">
+        <% if @user.attachment.url %>
+        <%= image_tag @user.attachment.url, class: 'profilepic' %>
+        <% else %>
+         <%= image_tag 'profile_default.jpg', class: 'img-rounded img-responsive' %>
+        <% end %>
+    </div>
+    <div class="col-sm-9">
+        <br>
+     <ul class="no_bullets">
+        <li><strong class="name"><%= @user.first_name %> <%= @user.last_name %></strong></li>
+         <li>Lives In: <%= @user.location %></li>
+         <li>Birthday: <%= @user.birthday %></li>
+         <li>Email: <%= @user.email %></li>
+
+    </ul>
+    </div>
+
+</div>
+<div class="container-fluid container-fixed">
+    <div id="freewall" class="free-wall">
+		    <div class="brick">
+		        <%= image_tag('clothes.jpg') %>
+		        <div class="info">
+		            <h3>Freewall</h3>
+		            <h5>Pinterest layout</h5>
+		        </div>
+		    </div>
+
+         <div class="brick">
+		        <%= image_tag('online-shopping.jpg') %>
+		        <div class="info">
+		            <h3>Freewall</h3>
+		            <h5>Pinterest layout</h5>
+		        </div>
+		    </div>
+        <div class="brick">
+		        <%= image_tag('1.jpg') %>
+		        <div class="info">
+		            <h3>Freewall</h3>
+		            <h5>Pinterest layout</h5>
+		        </div>
+		    </div>
+         <div class="brick">
+		        <%= image_tag('online-shopping.jpg') %>
+		        <div class="info">
+		            <h3>Freewall</h3>
+		            <h5>Pinterest layout</h5>
+		        </div>
+		    </div>
+        <div class="brick">
+		        <%= image_tag('1.jpg') %>
+		        <div class="info">
+		            <h3>Freewall</h3>
+		            <h5>Pinterest layout</h5>
+		        </div>
+		    </div>
+</div>
+</div>
+
+<script type="text/javascript">
+			var wall = new freewall("#freewall");
+			wall.reset({
+				selector: '.brick',
+				animate: true,
+				cellW: 200,
+				cellH: 'auto',
+				onResize: function() {
+					wall.fitWidth();
+				}
+			});
+
+			wall.container.find('.brick img').load(function() {
+				wall.fitWidth();
+			});
+
+
+		</script>
+
+</div>
