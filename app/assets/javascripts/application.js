@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap-sprockets
 //= require freewall
+//= require_self
 //= require_tree .
 
 $(function() {
@@ -33,7 +33,5 @@ $(function() {
       });
 
     });
-
-
 
 });
