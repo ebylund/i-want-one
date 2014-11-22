@@ -75,6 +75,8 @@ GEM
     execjs (2.2.2)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     hashie (3.3.1)
@@ -209,6 +211,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.1.0)
   devise
+  friendly_id (~> 5.0.0)
   jbuilder (~> 2.0)
   jquery-rails (~> 4.0.0.beta2)
   omniauth
